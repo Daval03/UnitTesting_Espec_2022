@@ -1,3 +1,4 @@
+//LLamamos a nuestras funciones para testearlas
 const TestFunction = require('./Index');
 const mockFunction = jest.fn(x => x); 
 

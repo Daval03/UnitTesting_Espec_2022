@@ -7,16 +7,20 @@ const TestFunction = {
             return "True"
         }return "False"
     },
+    //Esta funcion genera la secuencia de Fibonacci para un "n" dado
+    //junto a una variable "llamada" para el testeo de las funciones mock  
     Fibonacci(n, llamada){
-        let res = []
         let x = 0, xplus = 1, xnext
         for (let i = 1; i <= n; i++) {
           xnext = x + xplus;
           x = xplus;
           xplus = xnext;
-        }
+        }llamada(xplus)
         return xplus;
-    },forEach(list, callback) {
+    },
+    //Funcion dada para el testeo de las funciones mock
+    //Invoca "llamadas" por cada valor metido en la lista
+    forEach(list, callback) {
         for (let i = 0; i < list.length; i++) {
           callback(list[i]);
         }
