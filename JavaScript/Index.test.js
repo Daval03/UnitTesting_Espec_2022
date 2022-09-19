@@ -1,7 +1,8 @@
 //LLamamos a nuestras funciones para testearlas
 const TestFunction = require('./Index');
-const mockFunction = jest.fn(x => x); 
 
+
+const mockFunction = jest.fn(x => x); 
 
 //Matchers
 describe("Matchers test", () => {
@@ -12,6 +13,7 @@ describe("Matchers test", () => {
     expect(TestFunction.Fibonacci(8,mockFunction)).toBeLessThanOrEqual(34)
   })
 });
+
 
 //Setup and Teardown
 describe("Setup and Teardown tests", () => {
@@ -27,13 +29,13 @@ describe("Setup and Teardown tests", () => {
    Test1 = 6
  });
   afterEach(() => {
-   console.log("afterEach llamadod");
+   console.log("afterEach llamado");
  });
- 
  test("La secuencia Fibonacci de 6 deberia de regresar 13", () => {
    expect(TestFunction.Fibonacci(Test1,mockFunction)).toBe(13);
  });
 })
+
 
 //Mock Functions
 describe("Mock Functions test", () => {
