@@ -42,7 +42,8 @@ public class FizzBuzzTest {
     @DisplayName("Don´t play FizzBuzz with number = 0") 
     @Test
     public void testZero() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> FB.play(0));
+        Assertions.assertThrows(IllegalArgumentException.class, 
+        () -> FB.play(0));
     }
 
     @AfterEach
